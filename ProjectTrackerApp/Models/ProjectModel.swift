@@ -14,7 +14,7 @@ class Project: Identifiable {
     @Attribute(.unique) var id: String
     var startDate = Date()
     var name = ""
-    var focus = ""
+    var projectFocus   = ""
     @Relationship(deleteRule:.cascade,inverse: \ProjectUpdate.project)
     var update: [ProjectUpdate] = [ProjectUpdate()]
     

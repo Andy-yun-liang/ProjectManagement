@@ -12,6 +12,7 @@
 		B26248C92CE5706F00F00173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26248C82CE5706F00F00173 /* Assets.xcassets */; };
 		B26248CC2CE5706F00F00173 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26248CB2CE5706F00F00173 /* Preview Assets.xcassets */; };
 		B26248D42CE5710B00F00173 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248D32CE5710B00F00173 /* ProjectModel.swift */; };
+		B26248D72CE5801D00F00173 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248D62CE5801D00F00173 /* FontExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		B26248C82CE5706F00F00173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B26248CB2CE5706F00F00173 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B26248D32CE5710B00F00173 /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		B26248D62CE5801D00F00173 /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				B26248C82CE5706F00F00173 /* Assets.xcassets */,
 				B26248CA2CE5706F00F00173 /* Preview Content */,
 				B26248D22CE570EF00F00173 /* Models */,
+				B26248D52CE57FFE00F00173 /* Helpers */,
 			);
 			path = ProjectTrackerApp;
 			sourceTree = "<group>";
@@ -76,6 +79,14 @@
 				B26248D32CE5710B00F00173 /* ProjectModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B26248D52CE57FFE00F00173 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B26248D62CE5801D00F00173 /* FontExtensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			files = (
 				B26248C72CE5706E00F00173 /* ProjectListView.swift in Sources */,
 				B26248C52CE5706E00F00173 /* ProjectTracker.swift in Sources */,
+				B26248D72CE5801D00F00173 /* FontExtensions.swift in Sources */,
 				B26248D42CE5710B00F00173 /* ProjectModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

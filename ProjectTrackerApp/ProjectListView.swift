@@ -10,10 +10,11 @@ import SwiftUI
 struct ProjectListView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Image("Plus Icon")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Hello, world!").font(Font.screenHeading)
+                .foregroundStyle(Color("black opacity"))
         }
         .padding()
     }
