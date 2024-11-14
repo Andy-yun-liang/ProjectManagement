@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B26248C52CE5706E00F00173 /* ProjectTrackerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248C42CE5706E00F00173 /* ProjectTrackerAppApp.swift */; };
-		B26248C72CE5706E00F00173 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248C62CE5706E00F00173 /* ContentView.swift */; };
+		B26248C52CE5706E00F00173 /* ProjectTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248C42CE5706E00F00173 /* ProjectTracker.swift */; };
+		B26248C72CE5706E00F00173 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248C62CE5706E00F00173 /* ProjectListView.swift */; };
 		B26248C92CE5706F00F00173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26248C82CE5706F00F00173 /* Assets.xcassets */; };
 		B26248CC2CE5706F00F00173 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26248CB2CE5706F00F00173 /* Preview Assets.xcassets */; };
+		B26248D42CE5710B00F00173 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248D32CE5710B00F00173 /* ProjectModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B26248C12CE5706E00F00173 /* ProjectTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B26248C42CE5706E00F00173 /* ProjectTrackerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTrackerAppApp.swift; sourceTree = "<group>"; };
-		B26248C62CE5706E00F00173 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B26248C42CE5706E00F00173 /* ProjectTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTracker.swift; sourceTree = "<group>"; };
+		B26248C62CE5706E00F00173 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		B26248C82CE5706F00F00173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B26248CB2CE5706F00F00173 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B26248D32CE5710B00F00173 /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +53,11 @@
 		B26248C32CE5706E00F00173 /* ProjectTrackerApp */ = {
 			isa = PBXGroup;
 			children = (
-				B26248C42CE5706E00F00173 /* ProjectTrackerAppApp.swift */,
-				B26248C62CE5706E00F00173 /* ContentView.swift */,
+				B26248C42CE5706E00F00173 /* ProjectTracker.swift */,
+				B26248C62CE5706E00F00173 /* ProjectListView.swift */,
 				B26248C82CE5706F00F00173 /* Assets.xcassets */,
 				B26248CA2CE5706F00F00173 /* Preview Content */,
+				B26248D22CE570EF00F00173 /* Models */,
 			);
 			path = ProjectTrackerApp;
 			sourceTree = "<group>";
@@ -65,6 +68,14 @@
 				B26248CB2CE5706F00F00173 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B26248D22CE570EF00F00173 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B26248D32CE5710B00F00173 /* ProjectModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B26248C72CE5706E00F00173 /* ContentView.swift in Sources */,
-				B26248C52CE5706E00F00173 /* ProjectTrackerAppApp.swift in Sources */,
+				B26248C72CE5706E00F00173 /* ProjectListView.swift in Sources */,
+				B26248C52CE5706E00F00173 /* ProjectTracker.swift in Sources */,
+				B26248D42CE5710B00F00173 /* ProjectModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
