@@ -15,6 +15,7 @@
 		B26248D72CE5801D00F00173 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248D62CE5801D00F00173 /* FontExtensions.swift */; };
 		B26248D92CE616DA00F00173 /* StatBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248D82CE616DA00F00173 /* StatBoxView.swift */; };
 		B26248DC2CE619AB00F00173 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248DB2CE619AB00F00173 /* ProjectCardView.swift */; };
+		B26248DE2CE6C78B00F00173 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248DD2CE6C78B00F00173 /* AddProjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B26248D62CE5801D00F00173 /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
 		B26248D82CE616DA00F00173 /* StatBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBoxView.swift; sourceTree = "<group>"; };
 		B26248DB2CE619AB00F00173 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
+		B26248DD2CE6C78B00F00173 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				B26248D82CE616DA00F00173 /* StatBoxView.swift */,
 				B26248C62CE5706E00F00173 /* ProjectListView.swift */,
 				B26248DB2CE619AB00F00173 /* ProjectCardView.swift */,
+				B26248DD2CE6C78B00F00173 /* AddProjectView.swift */,
 			);
 			path = ProjectList;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				B26248D92CE616DA00F00173 /* StatBoxView.swift in Sources */,
 				B26248C72CE5706E00F00173 /* ProjectListView.swift in Sources */,
 				B26248DC2CE619AB00F00173 /* ProjectCardView.swift in Sources */,
+				B26248DE2CE6C78B00F00173 /* AddProjectView.swift in Sources */,
 				B26248C52CE5706E00F00173 /* ProjectTracker.swift in Sources */,
 				B26248D72CE5801D00F00173 /* FontExtensions.swift in Sources */,
 				B26248D42CE5710B00F00173 /* ProjectModel.swift in Sources */,

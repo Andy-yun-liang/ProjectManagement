@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ProjectListView: View {
+    
+    @State private var newProject : Project?
+    
     var body: some View {
         
         ZStack{
@@ -40,7 +44,10 @@ struct ProjectListView: View {
                     Spacer()
                     
                     Button(action: {
-                        print("hello")
+                        //creates new project
+                       
+                        newProject = Project()
+                        
                     }, label: {
                         
                         ZStack{
@@ -62,6 +69,12 @@ struct ProjectListView: View {
             }
             
         }//end of outer zstack
+        .sheet(item: $newProject) { project in
+            AddProjectView(project: project)
+                .presentationBackground(.ultraThinMaterial)
+                .presentationDetents([.fraction(0.4)])
+                .ignoresSafeArea(.keyboard)
+        }
         
     }
 }

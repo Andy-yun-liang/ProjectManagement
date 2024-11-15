@@ -12,7 +12,7 @@ struct ProjectCardView: View {
     var projectTopic : String
     var goal : String
     var cardColor : Color
-    
+   
     
     var body: some View {
         ZStack(alignment: .leading){
