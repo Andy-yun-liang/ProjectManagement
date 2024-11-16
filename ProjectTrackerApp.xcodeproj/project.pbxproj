@@ -17,6 +17,7 @@
 		B26248DC2CE619AB00F00173 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248DB2CE619AB00F00173 /* ProjectCardView.swift */; };
 		B26248DE2CE6C78B00F00173 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248DD2CE6C78B00F00173 /* AddProjectView.swift */; };
 		B26248E02CE82B0700F00173 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248DF2CE82B0700F00173 /* ProjectDetailView.swift */; };
+		B2A6EE1F2CE86C7F0024148E /* ProjectDetailUpdateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6EE1E2CE86C7F0024148E /* ProjectDetailUpdateCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B26248DB2CE619AB00F00173 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 		B26248DD2CE6C78B00F00173 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 		B26248DF2CE82B0700F00173 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
+		B2A6EE1E2CE86C7F0024148E /* ProjectDetailUpdateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailUpdateCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +49,6 @@
 		B26248B82CE5706E00F00173 = {
 			isa = PBXGroup;
 			children = (
-				B26248DF2CE82B0700F00173 /* ProjectDetailView.swift */,
 				B26248C32CE5706E00F00173 /* ProjectTrackerApp */,
 				B26248C22CE5706E00F00173 /* Products */,
 			);
@@ -64,6 +65,7 @@
 		B26248C32CE5706E00F00173 /* ProjectTrackerApp */ = {
 			isa = PBXGroup;
 			children = (
+				B26248E12CE833FF00F00173 /* ProjectDetail */,
 				B26248DA2CE616E900F00173 /* ProjectList */,
 				B26248C42CE5706E00F00173 /* ProjectTracker.swift */,
 				B26248C82CE5706F00F00173 /* Assets.xcassets */,
@@ -107,6 +109,15 @@
 				B26248DD2CE6C78B00F00173 /* AddProjectView.swift */,
 			);
 			path = ProjectList;
+			sourceTree = "<group>";
+		};
+		B26248E12CE833FF00F00173 /* ProjectDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B26248DF2CE82B0700F00173 /* ProjectDetailView.swift */,
+				B2A6EE1E2CE86C7F0024148E /* ProjectDetailUpdateCard.swift */,
+			);
+			path = ProjectDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B26248D92CE616DA00F00173 /* StatBoxView.swift in Sources */,
+				B2A6EE1F2CE86C7F0024148E /* ProjectDetailUpdateCard.swift in Sources */,
 				B26248C72CE5706E00F00173 /* ProjectListView.swift in Sources */,
 				B26248DC2CE619AB00F00173 /* ProjectCardView.swift in Sources */,
 				B26248DE2CE6C78B00F00173 /* AddProjectView.swift in Sources */,
