@@ -9,38 +9,35 @@ import SwiftUI
 
 struct ProjectCardView: View {
     
-    var projectTopic : String
-    var goal : String
-    var cardColor : Color
-   
+    var project : Project
     
     var body: some View {
         ZStack(alignment: .leading){
-            RoundedRectangle(cornerRadius: 20).fill(cardColor).shadow(radius: 10,x:0,y:4)
+            RoundedRectangle(cornerRadius: 20).fill(Color("blackv2")).shadow(radius: 10,x:0,y:4)
             
             VStack(alignment: .leading, spacing: 10){
-                Text(projectTopic).font(.bigHeadline)
+                Text(project.name).font(.bigHeadline)
                     
                 
                 HStack(alignment: .center,spacing: 13){
                     Spacer()
-                    StatBoxView(metric: "Hours", stat: "290", statboxColor: Color("pink"))
-                    StatBoxView(metric: "Sessions", stat: "41", statboxColor: Color("pink"))
-                    StatBoxView(metric: "Updates", stat: "122", statboxColor: Color("pink"))
-                    StatBoxView(metric: "Wins", stat: "51", statboxColor: Color("pink"))
+                    StatBoxView(metric: "Hours", stat: "290", statboxColor: Color("pinkv1"))
+                    StatBoxView(metric: "Sessions", stat: "41", statboxColor: Color("pinkv1"))
+                    StatBoxView(metric: "Updates", stat: "122", statboxColor: Color("pinkv1"))
+                    StatBoxView(metric: "Wins", stat: "51", statboxColor: Color("pinkv1"))
                     Spacer()
                 }
                 
                 Text("My current focus is ...").font(.featuredText)
                 
-                Text(goal).font(.featuredText).bold()
+                Text(project.projectFocus).font(.featuredText).bold()
                 
-            }.foregroundStyle(.white).padding()
+            }.foregroundStyle(Color("whitev1")).padding()
             
         }
     }
 }
 
 #Preview {
-    ProjectCardView(projectTopic: "Project 1", goal: "Learning SwiftUI",cardColor: Color("blackv2"))
+    ProjectCardView(project: Project())
 }

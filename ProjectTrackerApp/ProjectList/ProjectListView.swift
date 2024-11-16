@@ -11,6 +11,7 @@ import SwiftData
 struct ProjectListView: View {
     
     @State private var newProject : Project?
+    @Query private var projects : [Project]
     
     var body: some View {
         
@@ -25,10 +26,8 @@ struct ProjectListView: View {
                 
                 ScrollView(showsIndicators: false){
                     VStack(alignment: .leading, spacing: 26){
-                        ProjectCardView(projectTopic: "Project Title 1", goal: "Learning x", cardColor: Color("blackv2"))
-                        ProjectCardView(projectTopic: "Project Title 2", goal: "Learning y", cardColor: Color("blackv2"))
-                        ProjectCardView(projectTopic: "Project Title 1", goal: "Learning x", cardColor: Color("blackv2"))
-                        ProjectCardView(projectTopic: "Project Title 2", goal: "Learning y", cardColor: Color("blackv2"))
+                      
+                        ForEach(projects){p in ProjectCardView(project: p)}
                         
                     }
                 }

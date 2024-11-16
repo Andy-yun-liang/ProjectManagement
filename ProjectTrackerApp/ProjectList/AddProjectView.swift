@@ -26,7 +26,7 @@ struct AddProjectView: View {
             
             VStack(alignment:.leading){
                 
-                Text("New Project").font(.bigHeadline).foregroundStyle(.white)
+                Text("New Project").font(.bigHeadline).foregroundStyle(Color("whitev1"))
                 
                 HStack{
                     TextField("Project Name",text: $projectName).textFieldStyle(.roundedBorder)
@@ -34,6 +34,7 @@ struct AddProjectView: View {
                     Button("Save"){
                         project.name = projectName
                         modelContext.insert(project)
+                        dismiss()
                         
                     }.buttonStyle(.borderedProminent)
                         .tint(.blue)
