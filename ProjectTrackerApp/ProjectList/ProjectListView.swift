@@ -14,60 +14,66 @@ struct ProjectListView: View {
     @Query private var projects : [Project]
     
     var body: some View {
-        
-        ZStack{
-            Color("blackv3").ignoresSafeArea()
-            
-            
-            VStack(alignment: .leading) {
-                Text("Projects")
-                    .font(Font.screenHeading)
-                    .foregroundStyle(Color.white)
+        NavigationStack{
+            ZStack{
+                Color("blackv3").ignoresSafeArea()
                 
-                ScrollView(showsIndicators: false){
-                    VStack(alignment: .leading, spacing: 26){
-                      
-                        ForEach(projects){p in ProjectCardView(project: p)}
-                        
-                    }
-                }
-               
-            }
-            .padding()
-            
-            HStack{
                 
-                Spacer()
-                
-                VStack{
-                    Spacer()
+                VStack(alignment: .leading) {
+                    Text("Projects")
+                        .font(Font.screenHeading)
+                        .foregroundStyle(Color.white)
                     
-                    Button(action: {
-                        //creates new project
-                       
-                        newProject = Project()
-                        
-                    }, label: {
-                        
-                        ZStack{
-                            Circle().frame(width: 67,height: 67).foregroundStyle(Color("blackv2"))
-                            Image("Plus Icon")
+                    ScrollView(showsIndicators: false){
+                        VStack(alignment: .leading, spacing: 26){
                             
+                            ForEach(projects){p in
+                                
+                                NavigationLink {
+                                    ProjectDetailView(project: p)
+                                } label: {
+                                    ProjectCardView(project: p)
+                                }.buttonStyle(.plain)
+                                
+                            }
                             
                         }
-                        
-                        
-                        
-                        
-                        
-                    })//end of add btn
+                    }
                     
+                }
+                .padding()
+                
+                HStack{
                     
-                }.padding(.trailing) // end of vstack that pushes add btn to bottom right
-            
-            }
-            
-        }//end of outer zstack
+                    Spacer()
+                    
+                    VStack{
+                        Spacer()
+                        
+                        Button(action: {
+                            //creates new project
+                            
+                            newProject = Project()
+                            
+                        }, label: {
+                            
+                            ZStack{
+                                Circle().frame(width: 67,height: 67).foregroundStyle(Color("blackv2"))
+                                Image("Plus Icon")
+                                
+                                
+                            }
+                            
+                           
+                        })//end of add btn
+                        
+                        
+                    }.padding(.trailing) // end of vstack that pushes add btn to bottom right
+                    
+                }
+                
+            }//end of outer zstack
+        }
         .sheet(item: $newProject) { project in
             AddProjectView(project: project)
                 .presentationBackground(.ultraThinMaterial)
