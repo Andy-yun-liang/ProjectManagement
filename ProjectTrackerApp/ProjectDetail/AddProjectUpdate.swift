@@ -45,7 +45,7 @@ struct AddProjectUpdate: View {
                     newUpdate.headline = headline
                     newUpdate.summary = summary
                     newUpdate.hours = hours
-                    project.updates.append(newUpdate) //this line here esentially ensures that updates belong in the correct project. So if i were to create an update inside project 1, the update only belongs to project 1.
+                    project.updates.insert(newUpdate, at: 0)
                     dismiss()
                 }.buttonStyle(.borderedProminent)
                 

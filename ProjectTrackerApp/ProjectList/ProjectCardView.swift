@@ -28,9 +28,12 @@ struct ProjectCardView: View {
                     Spacer()
                 }
                 
-                Text("My current focus is ...").font(.featuredText)
-                
-                Text(project.projectFocus).font(.featuredText).bold()
+                if(project.projectFocus.trimmingCharacters(in: .whitespacesAndNewlines) != ""){
+                    
+                    Text("My current focus is ...").font(.featuredText)
+                    
+                    Text(project.projectFocus).font(.featuredText).bold()
+                }
                 
             }.foregroundStyle(Color("whitev1")).padding()
             

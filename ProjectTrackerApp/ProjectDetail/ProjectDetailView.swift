@@ -10,6 +10,7 @@ import SwiftData
 
 struct ProjectDetailView: View {
     var project: Project
+    @State private var isShowingEditFocus = false
     @State private var newUpdate : ProjectUpdate?
     @Query private var myProjectUpdates : [ProjectUpdate]
     
@@ -34,15 +35,28 @@ struct ProjectDetailView: View {
                         StatBoxView(metric: "Wins", stat: "51", statboxColor: Color("pinkv1"))
                         Spacer()
                     }
-                    
-                    Text("My current focus is...")
-                        .font(.featuredText)
-                        .bold()
-                        .padding(.leading, 40)
-                    
+                    if project.projectFocus.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+                        Text("My current focus is...")
+                            .font(.featuredText)
+                            .bold()
+                            .padding(.leading, 40)
+                    }
                     HStack {
-                        Image(systemName: "checkmark.square")
-                        Text("Learning SwiftUI")
+                        
+                        if project.projectFocus.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+                            
+                            Button{
+                                completeMilestone()
+                            }label: {
+                                Image(systemName: "checkmark.square")
+                                Text(project.projectFocus)
+                            }
+                            
+                        }else{
+                            Button("Tap here to add a focus"){
+                                isShowingEditFocus = true
+                            }.padding(.vertical,12).bold()
+                        }
                     }
                     .font(.featuredText)
                     .padding(.leading, 60)
@@ -69,9 +83,11 @@ struct ProjectDetailView: View {
                         // Cards
                         VStack(spacing: 26) {
                             
-                            ForEach(myProjectUpdates){
+                            ForEach(project.updates.sorted(by: { pU1, pU2 in
+                                pU1.date > pU2.date
+                            })){
                                 pUpdate in
-                                ProjectDetailUpdateCard(myprojectUpdate: pUpdate)
+                                ProjectDetailUpdateCardView(myprojectUpdate: pUpdate)
                                 
                             }
                            
@@ -109,8 +125,29 @@ struct ProjectDetailView: View {
             AddProjectUpdate(newUpdate: nUpdate, project: project).presentationBackground(.ultraThinMaterial)
                 .presentationDetents([.fraction(0.4)])
                 .ignoresSafeArea(.keyboard)
-        }
+        }.sheet(isPresented: $isShowingEditFocus, content: {
+            EditProjectFocusView(project: project).presentationBackground(.ultraThinMaterial)
+                .presentationDetents([.fraction(0.4)])
+                .ignoresSafeArea(.keyboard)
+        })
     }
+    
+    
+    func completeMilestone(){
+        
+        //create a new project update for milestone
+        let milestoneUpdate = ProjectUpdate()
+        milestoneUpdate.updateType = .milestone
+        milestoneUpdate.headline = "Milestone Achieved !"
+        milestoneUpdate.summary = project.projectFocus
+        project.updates.insert(milestoneUpdate, at: 0)
+        
+        
+        
+        //reset projectFocus to null
+        project.projectFocus = ""
+    }
+    
 }
 
 #Preview {
