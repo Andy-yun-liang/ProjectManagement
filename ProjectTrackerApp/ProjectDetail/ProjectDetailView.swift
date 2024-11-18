@@ -70,16 +70,18 @@ struct ProjectDetailView: View {
                 ScrollView(showsIndicators: false) {
                     ZStack(alignment: .leading) {
                         // Timeline vertical line
-                        Rectangle()
-                            .fill(Color("whitev1").opacity(0.85))
-                            .frame(width: 4)
-                            .padding(.leading, 43)
                         
-                        Rectangle()
-                            .fill(Color("whitev1").opacity(0.35))
-                            .frame(width: 4)
-                            .padding(.leading, 49)
-                        
+                        if !project.updates.isEmpty{
+                            Rectangle()
+                                .fill(Color("whitev1").opacity(0.85))
+                                .frame(width: 4)
+                                .padding(.leading, 43)
+                            
+                            Rectangle()
+                                .fill(Color("whitev1").opacity(0.35))
+                                .frame(width: 4)
+                                .padding(.leading, 49)
+                        }
                         // Cards
                         VStack(spacing: 26) {
                             
@@ -142,8 +144,7 @@ struct ProjectDetailView: View {
         milestoneUpdate.summary = project.projectFocus
         project.updates.insert(milestoneUpdate, at: 0)
         
-        
-        
+
         //reset projectFocus to null
         project.projectFocus = ""
     }
