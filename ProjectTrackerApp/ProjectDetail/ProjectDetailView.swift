@@ -12,7 +12,7 @@ struct ProjectDetailView: View {
     var project: Project
     @State private var isShowingEditFocus = false
     @State private var newUpdate : ProjectUpdate?
-    @Query private var myProjectUpdates : [ProjectUpdate]
+    
     
     var body: some View {
         ZStack(alignment: .top) {

@@ -15,7 +15,7 @@
 		B26248D72CE5801D00F00173 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248D62CE5801D00F00173 /* FontExtensions.swift */; };
 		B26248D92CE616DA00F00173 /* StatBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248D82CE616DA00F00173 /* StatBoxView.swift */; };
 		B26248DC2CE619AB00F00173 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248DB2CE619AB00F00173 /* ProjectCardView.swift */; };
-		B26248DE2CE6C78B00F00173 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248DD2CE6C78B00F00173 /* AddProjectView.swift */; };
+		B26248DE2CE6C78B00F00173 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248DD2CE6C78B00F00173 /* EditProjectView.swift */; };
 		B26248E02CE82B0700F00173 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26248DF2CE82B0700F00173 /* ProjectDetailView.swift */; };
 		B2A6EE1F2CE86C7F0024148E /* ProjectDetailUpdateCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6EE1E2CE86C7F0024148E /* ProjectDetailUpdateCardView.swift */; };
 		B2A6EE212CE9C94E0024148E /* AddProjectUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6EE202CE9C94E0024148E /* AddProjectUpdate.swift */; };
@@ -33,7 +33,7 @@
 		B26248D62CE5801D00F00173 /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
 		B26248D82CE616DA00F00173 /* StatBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBoxView.swift; sourceTree = "<group>"; };
 		B26248DB2CE619AB00F00173 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
-		B26248DD2CE6C78B00F00173 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
+		B26248DD2CE6C78B00F00173 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		B26248DF2CE82B0700F00173 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
 		B2A6EE1E2CE86C7F0024148E /* ProjectDetailUpdateCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailUpdateCardView.swift; sourceTree = "<group>"; };
 		B2A6EE202CE9C94E0024148E /* AddProjectUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectUpdate.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 				B26248D82CE616DA00F00173 /* StatBoxView.swift */,
 				B26248C62CE5706E00F00173 /* ProjectListView.swift */,
 				B26248DB2CE619AB00F00173 /* ProjectCardView.swift */,
-				B26248DD2CE6C78B00F00173 /* AddProjectView.swift */,
+				B26248DD2CE6C78B00F00173 /* EditProjectView.swift */,
 			);
 			path = ProjectList;
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 				B2A6EE252CEB30590024148E /* EditProjectFocusView.swift in Sources */,
 				B26248C72CE5706E00F00173 /* ProjectListView.swift in Sources */,
 				B26248DC2CE619AB00F00173 /* ProjectCardView.swift in Sources */,
-				B26248DE2CE6C78B00F00173 /* AddProjectView.swift in Sources */,
+				B26248DE2CE6C78B00F00173 /* EditProjectView.swift in Sources */,
 				B26248C52CE5706E00F00173 /* ProjectTracker.swift in Sources */,
 				B26248D72CE5801D00F00173 /* FontExtensions.swift in Sources */,
 				B26248D42CE5710B00F00173 /* ProjectModel.swift in Sources */,
