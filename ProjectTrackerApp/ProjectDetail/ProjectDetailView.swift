@@ -14,6 +14,7 @@ struct ProjectDetailView: View {
     @State private var newUpdate : ProjectUpdate?
     
     
+    
     var body: some View {
         ZStack(alignment: .top) {
             Color("blackv3").ignoresSafeArea() //changes overall theme color
@@ -89,7 +90,12 @@ struct ProjectDetailView: View {
                                 pU1.date > pU2.date
                             })){
                                 pUpdate in
-                                ProjectDetailUpdateCardView(myprojectUpdate: pUpdate)
+                                ProjectDetailUpdateCardView(myprojectUpdate: pUpdate).onTapGesture {
+                                    
+                                }.onLongPressGesture {
+                                    newUpdate = pUpdate
+                                    
+                                }
                                 
                             }
                            
@@ -122,14 +128,18 @@ struct ProjectDetailView: View {
             }
         }
         .ignoresSafeArea()
-        .sheet(item: $newUpdate){
+        .sheet(item: $newUpdate){	
             nUpdate in
-            AddProjectUpdate(newUpdate: nUpdate, project: project).presentationBackground(.ultraThinMaterial)
-                .presentationDetents([.fraction(0.4)])
+            
+            let editMode = nUpdate.headline.trimmingCharacters(in: .whitespacesAndNewlines) != ""
+            
+            AddProjectUpdate(newUpdate: nUpdate, project: project,isEditMode: editMode)
+                .presentationBackground(.ultraThinMaterial)
+                .presentationDetents([.fraction(0.7)])
                 .ignoresSafeArea(.keyboard)
         }.sheet(isPresented: $isShowingEditFocus, content: {
             EditProjectFocusView(project: project).presentationBackground(.ultraThinMaterial)
-                .presentationDetents([.fraction(0.4)])
+                .presentationDetents([.fraction(0.7)])
                 .ignoresSafeArea(.keyboard)
         })
     }
