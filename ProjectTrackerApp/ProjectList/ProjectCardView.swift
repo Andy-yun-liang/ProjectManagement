@@ -21,10 +21,10 @@ struct ProjectCardView: View {
                 
                 HStack(alignment: .center,spacing: 13){
                     Spacer()
-                    StatBoxView(metric: "Hours", stat: "290", statboxColor: Color("pinkv1"))
-                    StatBoxView(metric: "Sessions", stat: "41", statboxColor: Color("pinkv1"))
-                    StatBoxView(metric: "Updates", stat: "122", statboxColor: Color("pinkv1"))
-                    StatBoxView(metric: "Wins", stat: "51", statboxColor: Color("pinkv1"))
+                    StatBoxView(metric: "Hours", stat: String(Int(project.hours)), statboxColor: Color("pinkv1"))
+                    StatBoxView(metric: "Sessions", stat: String(project.sessions), statboxColor: Color("pinkv1"))
+                    StatBoxView(metric: "Updates", stat: String(project.updates.count), statboxColor: Color("pinkv1"))
+                    StatBoxView(metric: "Wins", stat: String(project.wins), statboxColor: Color("pinkv1"))
                     Spacer()
                 }
                 

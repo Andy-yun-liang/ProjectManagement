@@ -13,7 +13,7 @@ struct ProjectDetailView: View {
     @State private var isShowingEditFocus = false
     @State private var newUpdate : ProjectUpdate?
     
-    
+    @Environment(\.modelContext) private var modelContext
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -30,10 +30,10 @@ struct ProjectDetailView: View {
                     
                     HStack(alignment: .center, spacing: 25) {
                         Spacer()
-                        StatBoxView(metric: "Hours", stat: "290", statboxColor: Color("pinkv1"))
-                        StatBoxView(metric: "Sessions", stat: "41", statboxColor: Color("pinkv1"))
-                        StatBoxView(metric: "Updates", stat: "122", statboxColor: Color("pinkv1"))
-                        StatBoxView(metric: "Wins", stat: "51", statboxColor: Color("pinkv1"))
+                        StatBoxView(metric: "Hours", stat: String(Int(project.hours)), statboxColor: Color("pinkv1"))
+                        StatBoxView(metric: "Sessions", stat: String(project.sessions), statboxColor: Color("pinkv1"))
+                        StatBoxView(metric: "Updates", stat: String(project.updates.count), statboxColor: Color("pinkv1"))
+                        StatBoxView(metric: "Wins", stat: String(project.wins), statboxColor: Color("pinkv1"))
                         Spacer()
                     }
                     if project.projectFocus.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
@@ -154,7 +154,11 @@ struct ProjectDetailView: View {
         milestoneUpdate.summary = project.projectFocus
         project.updates.insert(milestoneUpdate, at: 0)
         
-
+        try? modelContext.save()
+        
+        //update the statistics
+        StatsHelper.updateStatsOnCreate(project: project, update: milestoneUpdate)
+        
         //reset projectFocus to null
         project.projectFocus = ""
     }

@@ -46,7 +46,10 @@ struct AddProjectUpdate: View {
                 
                 
                 Button(isEditMode ? "Save" : "Add"){
-            
+                    
+                    //keep track of the difference in hours for an edit update
+                    let hoursDifference = Double(hours) - newUpdate.hours
+                    
                         newUpdate.headline = headline
                         newUpdate.summary = summary
                         newUpdate.hours = hours
@@ -54,6 +57,16 @@ struct AddProjectUpdate: View {
                     if !isEditMode{
                         
                         project.updates.insert(newUpdate, at: 0)
+                        
+                        try? modelContext.save()
+                        //update statistics
+                        
+                        StatsHelper.updateStatsOnCreate(project: project, update: newUpdate)
+                    }
+                    else{
+                        //edit project update
+                        //update stats
+                        StatsHelper.updateStatsOnEdit(project: project, hoursDiff: hoursDifference)
                     }
                     
                     
@@ -80,6 +93,10 @@ struct AddProjectUpdate: View {
                 project.updates.removeAll{
                     updateObjectElement in updateObjectElement.id == newUpdate.id
                 }
+                //force a swiftdata save
+                try? modelContext.save()
+                //delete updates
+                StatsHelper.updateDeleted(project: project, update: newUpdate)
                 dismiss()
             }
         }.onAppear{
