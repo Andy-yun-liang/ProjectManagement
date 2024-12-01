@@ -26,11 +26,7 @@ An intuitive iOS application designed to streamline your project management. Eas
 ## Screenshots  
 
 ![Screenshot 2024-11-30 at 5 33 00 PM](https://github.com/user-attachments/assets/05d94749-8e0f-4dbf-96b2-4a3e40fb26e5)
-
-
 ![Screenshot 2024-11-30 at 5 39 29 PM](https://github.com/user-attachments/assets/ed4c311c-c143-4c77-95b0-de3f9e8943de)
-
-
 ![Screenshot 2024-11-30 at 5 38 18 PM](https://github.com/user-attachments/assets/4c003e2b-e77c-49d1-96d2-17335facfacd)
 
 
